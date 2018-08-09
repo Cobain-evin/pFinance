@@ -1,0 +1,101 @@
+/*
+***********************
+* 复写MintUI样式
+***********************
+*/
+
+/*Message Box相关样式*/
+.mint-msgbox{
+  width: 480/@rem;
+  border-radius: 16/@rem;
+  .mint-msgbox-header{
+    padding-top: 50/@rem;
+    .mint-msgbox-title{
+      font-size: 36/@rem;
+      color: #000000;
+      line-height: 54/@rem;
+      font-weight: normal;
+    }
+  }
+  .mint-msgbox-content{
+    padding: 0 50/@rem 40/@rem;
+    border-bottom: 1/@rem solid #e7e7e7; 
+    .mint-msgbox-message{
+      font-size: 30/@rem;
+      color: #666666;
+      line-height: 48/@rem;
+    }
+  }
+  .mint-msgbox-btns{
+    height: 84/@rem;
+    .mint-msgbox-btn{
+      height: 84/@rem;
+      line-height: 84/@rem;
+      font-size: 28/@rem;
+      color: #047cff;
+    }
+    .mint-msgbox-cancel{
+      border-right: 1/@rem solid #e7e7e7;
+    }
+  }
+}
+
+/*Toast相关样式*/
+.mint-toast{
+  width: 190/@rem;
+  height: 190/@rem;
+  padding-top: 45/@rem!important;
+  .mintui{
+    font-size: 40/@rem;
+  }
+  .mint-toast-text{
+    font-size: 30/@rem;
+    line-height: 54/@rem;
+  }
+}
+
+/*Cell相关样式*/
+.mint-cell{
+  min-height: 60/@rem;
+  .mint-cell-wrapper{
+    font-size: 30/@rem;
+  }
+}
+
+/*Button相关样式*/
+.mint-button--small{
+  font-size: 24/@rem;
+  padding: 10/@rem 12/@rem;
+  height: 50/@rem;
+}
+
+/*Mt-Loadmore相关样式*/
+.mint-loadmore{
+  /*设置盒子的高度最少为屏幕高度，避免下拉刷新时，下方数据因盒子高度太小而溢出隐藏*/
+  min-height: 100vh;
+}
+
+
+/*
+***********************
+* 复写VueImgInputer样式
+***********************
+*/
+.img-inputer{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  z-index: 9;
+  background-color: transparent;
+  overflow: hidden;
+  box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  .iconfont, .img-inputer, .img-inputer__placeholder, .img-inputer__state{
+    display: none;
+  }
+  &:hover{
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255,255,255,0);
+  }
+}

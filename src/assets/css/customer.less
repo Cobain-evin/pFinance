@@ -1,0 +1,601 @@
+//客户列表
+.list-block{
+  padding-top: 10/@rem;
+  .num{
+    line-height: 62/@rem;
+    padding-left: 30/@rem;
+    font-size: 24/@rem;
+    color: #999999;
+  }
+  .item-list{
+    background-color: #ffffff;
+    padding-left: 30/@rem;
+    border-bottom: 1/@rem solid #e5e5e5;
+    li{
+      position: relative;
+      padding: 28/@rem 30/@rem 28/@rem 0;
+      border-bottom: 1/@rem solid #e5e5e5;
+      &:last-child{
+        border-bottom: 0 none;
+      }
+      .item-title{
+        display: flex;
+        align-items: center;
+        .item-name{
+          line-height: 40/@rem;
+          padding: 4/@rem 0;
+          font-size: 30/@rem;
+          color: #222222;
+          margin-right: 20/@rem;
+          font-weight: bold;
+        }
+        .item-type{
+          display: inline-block;
+          font-size: 24/@rem;
+          color: #4b77b0;
+          border: 1/@rem solid #4b77b0;
+          padding: 0 10/@rem;
+          border-radius: 40/@rem;
+          line-height: 40/@rem;
+          &.blue{
+            color: #4b77b0;
+            border-color: #4b77b0;
+          }
+          &.red{
+            color: #f85143;
+            border-color: #f85143;
+          }
+        }
+      }
+      .item-content{
+        line-height: 46/@rem;
+        .item-content-line{
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          .green{
+            color: #45c189;
+          }
+          .red{
+            color: #f85143;
+          }
+        }
+      }
+      &.list-checkbox{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .checkbox-column{
+          width: 36/@rem;
+          height: 36/@rem;
+          font-size: 36/@rem;
+          &.h-icon-checkbox{
+            color: #9b9b9b;
+          }
+          &.h-icon-checkbox-active{
+            color: #40bc81;
+          }
+        }
+        .content-column{
+          width: 638/@rem;
+        }
+      }
+    }
+  }
+}
+
+/*列表无限刷新样式*/
+.loading-box{
+  height: 100/@rem;
+  text-align: center;
+  line-height: 100/@rem;
+  >div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    span{
+      margin-left: 20/@rem;
+    }
+  }
+}
+
+//新增客户
+.info-block{
+  .info-title{
+    padding-top: 10/@rem;
+    padding-left: 30/@rem;
+    min-height: 20/@rem;
+    line-height: 65/@rem;
+    display: flex;
+    justify-content: space-between;
+    background-color: #f5f5f5;
+    .delete{
+      display: inline-block;
+      width: 90/@rem;
+      text-align: center;
+      font-size: 30/@rem;
+      color: #999999;
+    }
+  }
+  .info-form{
+    background-color: #ffffff;
+    padding-left: 30/@rem;
+    border-bottom: 1/@rem solid #e5e5e5;
+    li{
+      padding: 21/@rem 30/@rem 21/@rem 0;
+      border-bottom: 1/@rem solid #e5e5e5;
+      &:last-child{
+        border-bottom: 0 none;
+      }
+      .info-area{
+        font-size: 30/@rem;
+        color: #222222;
+        .info-name{
+          line-height: 60/@rem;
+          .required{
+            color: #f85143;
+          }
+        }
+        .info-value{
+          word-break: break-all;
+          textarea{
+            line-height: 40/@rem;
+            color: #222222;
+            font-size: 30/@rem;
+            width: 100%;
+            min-height: 120/@rem;
+          }
+        }
+      }
+      &.readonly{
+        padding: 29/@rem 30/@rem 29/@rem 0;
+        .info-name{
+          line-height: 44/@rem;
+        }
+        .info-value{
+          color: #666666;
+          line-height: 44/@rem;
+        }
+      }
+    }
+    .info-rows{
+      display: flex;
+      font-size: 30/@rem;
+      color: #222222;
+      .info-name{
+        line-height: 60/@rem;
+        width: 210/@rem;
+        .required{
+          color: #f85143;
+        }
+      }
+      .info-value{
+        width: 480/@rem;
+        align-items: center;
+        word-break: break-all;
+        [type="text"],[type="tel"]{
+          height: 60/@rem;
+          color: #222222;
+          font-size: 30/@rem;
+        }
+        &.flexbox-sb{
+          [type="text"],[type="tel"]{
+            width: 60%;
+          }
+        }
+        &.popupable{
+          line-height: 60/@rem;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          input{
+            width: 440/@rem;
+          }
+          .r{
+            color: #cccccc;
+            .h-icon-arrow-right{
+              color: #cccccc;
+              font-size: 24/@rem;
+            }
+          }
+        }
+      }
+    }
+    .sub-info{
+      padding: 27/@rem 0;
+      border-top: 1/@rem solid #e5e5e5;
+      .info-rows{
+        .info-name, .info-value{
+          line-height: 44/@rem;
+          font-size: 26/@rem;
+          color: #666666;
+        }
+      }
+    }
+  }
+  .info-photo{
+    background-color: #ffffff;
+    border-bottom: 1/@rem solid #e5e5e5;
+    padding-left: 30/@rem;
+    .subtitle{
+      padding: 27/@rem 0 20/@rem;
+      line-height: 48/@rem;
+      font-size: 30/@rem;
+      color: #222222;
+      .required{
+        color: #f85143;
+      }
+    }
+    .photo-standard{
+      padding-right: 30/@rem;
+      li{
+        width: 150/@rem;
+        .img{
+          img{
+            width: 150/@rem;
+            height: 97/@rem;
+          }
+        }
+        p{
+          text-align: center;
+          font-size: 24/@rem;
+          line-height: 44/@rem;
+          .h-icon{
+            margin-right: 8/@rem;
+            vertical-align: middle;
+            &.h-icon-error{
+              color: #f85143;
+            }
+            &.h-icon-ok{
+              color: #45c189;
+            }
+          }
+          
+        }
+      }
+    }
+    .photo-list{
+      padding: 0 0 10/@rem;
+      ul{
+        display: flex;
+        li{
+          margin-bottom: 30/@rem;
+          margin-right: 30/@rem;
+          .photo-block{
+            padding: 4/@rem;
+            border: 1/@rem dashed #b0c2d7;
+            border-radius: 6/@rem;
+            position: relative;
+            .camera{
+              width: 4em;
+              height: 100/@rem;
+              font-size: 22/@rem;
+              color: #4b77b0;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              .h-icon-camera{
+                font-size: 50/@rem;
+                text-align: center;
+              }
+              p{
+                line-height: 28/@rem;
+              }
+            }
+            .camera-circle{
+              width: 140/@rem;
+              height: 140/@rem;
+              position: absolute;
+              left: 0;
+              right: 0;
+              top: 0;
+              bottom: 0;
+              margin: auto;
+              background-color: rgba(60,124,230,.25);
+              border-radius: 70/@rem;
+              line-height: 140/@rem;
+              text-align: center;
+              .h-icon-camera{
+                font-size: 50/@rem;
+                color: #4b77b0;
+              }
+            }
+            .close{
+              width: 80/@rem;
+              height: 80/@rem;
+              position: absolute;
+              right: -35/@rem;
+              top: -35/@rem;
+              font-size: 40/@rem;
+              color: #000000;
+              opacity: .4;
+              text-align: center;
+              line-height: 80/@rem;
+            }
+            &.l{
+              width: 200/@rem;
+              height: 290/@rem;
+              > img{
+                width: 200/@rem;
+                height: 290/@rem;
+              }
+            }
+            &.s{
+              width: 199/@rem;
+              height: 200/@rem;
+              > img{
+                width: 199/@rem;
+                height: 200/@rem;
+              }
+            }
+            &.m{
+              width: 290/@rem;
+              height: 200/@rem;
+              > img{
+                width: 290/@rem;
+                height: 200/@rem;
+              }
+            }
+            &.xm{
+              width: 510/@rem;
+              height: 310/@rem;
+              > img{
+                width: 510/@rem;
+                height: 310/@rem;
+              }
+            }
+          }
+        }
+        &.id-card{
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+    }
+    .needs{
+      border-bottom: 0 none;
+      .subtitle{
+        font-size: 26/@rem;
+        color: #666666;
+      }
+    }
+    .photo-list-show{
+      padding: 30/@rem;
+      display: flex;
+      justify-content: space-between;
+      .name{
+        font-size: 30/@rem;
+        color: #222222;
+      }
+      .id-box{
+        width: 260/@rem;
+        height: 160/@rem;
+        background-color: #eeeeee;
+        border-radius: 8/@rem;
+        position: relative;
+        overflow: hidden;
+        img{
+          width: 260/@rem;
+          height: 160/@rem;
+        }
+        .text{
+          position: absolute;
+          width: 100%;
+          height: 60/@rem;
+          left: 0;
+          bottom: 0;
+          background-color: rgba(0,0,0,.5);
+          line-height: 60/@rem;
+          text-align: center;
+          color: #ffffff;
+        }
+      }
+    }
+  }
+  &.longname{
+    .info-form{
+      li{
+        .info-rows{
+          .info-name{
+            width: 280/@rem;
+          }
+          .info-value{
+            width: 410/@rem;
+          }
+        }
+      }
+    }
+  }
+  &.longername{
+    .info-form{
+      li{
+        .info-rows{
+          .info-name{
+            width: 320/@rem;
+          }
+          .info-value{
+            width: 370/@rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+//新增客户流程
+.fixed-indication-head{
+  padding-top: 161/@rem;
+}
+.step-indication{
+  box-sizing: border-box;
+  padding: 30/@rem 90/@rem;
+  background-color: #ffffff;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  .steps{
+    width: 4em;
+    font-size: 26/@rem;
+    color: #666666;
+    .indication{
+      width: 50/@rem;
+      height: 50/@rem;
+      margin: 0 auto;
+      margin-bottom: 20/@rem;
+      position: relative;
+      .num{
+        width: 50/@rem;
+        height: 50/@rem;
+        background-color: #d3d3d3;
+        color: #ffffff;
+        line-height: 50/@rem;
+        text-align: center;
+        font-size: 34/@rem;
+        border-radius: 50/@rem;
+        position: relative;
+        z-index: 2;
+      }
+      .line{
+        position: absolute;
+        height: 6/@rem;
+        width: 196/@rem;
+        background-color: #d3d3d3;
+        right: 43/@rem;
+        top: 22/@rem;
+        z-index: 1;
+      }
+    }
+    p{
+      text-align: center;
+    }
+    &.active{
+      .num, .line{
+        background-color: #45c189;
+      }
+      p{
+        color: #45c189;
+      }
+    }
+  }
+  &.two-steps{
+    padding: 30/@rem 160/@rem;
+    .steps{
+      .indication{
+        .line{
+          width: 284/@rem;
+        }
+      }
+    }
+  }
+  &.four-steps{
+    padding: 30/@rem 60/@rem;
+    .steps{
+      .indication{
+        .line{
+          width: 134/@rem;
+        }
+      }
+    }
+  }
+  &.five-steps{
+    padding: 30/@rem;
+    .steps{
+      .indication{
+        .line{
+          width: 102/@rem;
+        }
+      }
+    }
+  }
+  &.fiveem{
+    .steps{
+      width: 5em;
+    }
+  }
+}
+
+/*客户详情*/
+.fixed-tab-head{
+  padding-top: 102/@rem;
+}
+.info-tab{
+  width: 100%;
+  height: 102/@rem;
+  background-color: #ffffff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  li{
+    width: 100%;
+    line-height: 100/@rem;
+    border-bottom: 2/@rem solid #ffffff;
+    text-align: center;
+    font-size: 34/@rem;
+    color: #666666;
+    &.active{
+      color: #4b77b0;
+      line-height: 100/@rem;
+      border-bottom-color: #4b77b0;
+    }
+  }
+  &.four-tabs li{
+    font-size: 28/@rem;
+  }
+  &.five-tabs li{
+    font-size: 26/@rem;
+  }
+}
+
+/*添加表单模块*/
+.add-block{
+  padding-left: 30/@rem;
+  line-height: 84/@rem;
+  font-size: 30/@rem;
+  .h-icon-new{
+    display: inline-block;
+    font-size: 37/@rem;
+    margin-right: 12/@rem;
+    vertical-align: middle;
+    margin-top: -10/@rem;
+    color: #4b77b0;
+  }
+}
+
+/*表单页面调出一个查询列表*/
+.popup-box{
+  width: 100vw;
+  height: 100vh;
+  background-color: #f5f5f5;
+  overflow-y: scroll;
+}
+
+//用于列表页面没有数据时的占位
+.no-data{
+  line-height: 100/@rem;
+  font-size: 40/@rem;
+  text-align: center;
+  color: #222222;
+}
+.info-form .no-data{
+  line-height: 60/@rem;
+  font-size: 24/@rem;
+}
+
+/*信息页面修改按钮*/
+.edit{
+  width: 110/@rem;
+  height: 110/@rem;
+  position: fixed;
+  top: 740/@rem;
+  right: 30/@rem;
+  font-size: 110/@rem;
+  color: #4b77b0;
+}

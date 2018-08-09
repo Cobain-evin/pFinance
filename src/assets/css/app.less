@@ -1,0 +1,213 @@
+/**
+*   app.less，定义初始化及公共样式，其他样式文件需引用此文件
+**/
+
+//定义less变量
+@rem: 37.5rem;
+
+/*Reset*/
+body, p{
+    margin: 0;
+    -webkit-text-size-adjust: none;
+}
+a{
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+h1, h3, h5{
+    margin: 0;
+    font-weight: normal;
+    font-size: 26/@rem;
+}
+ul, li, dl, dt, dd{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+img{
+    border: none;
+    outline: none;
+    vertical-align: middle;
+}
+em{
+    font-style: normal;
+}
+input, textarea{
+    border: none;
+    outline: none;
+    font-size: 26/@rem;
+    color: #666666;
+    margin: 0;
+    padding: 0;
+}
+input[type="search"]{
+    -webkit-appearance:none;
+} 
+
+
+/*公共样式*/
+.tc{
+    text-align: center;
+}
+.flexbox-sb{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.pad-head{
+    padding-top: 20/@rem;
+}
+.pad-foot{
+    padding-bottom: 60/@rem;
+}
+.pad-fixedfoot{
+    padding-bottom: 100/@rem;
+}
+.green{
+    color: #45c189;
+}
+.red{
+    color: #f85143;
+}
+
+/*结构样式*/
+#app{
+    min-height: 100vh;
+}
+body{
+    background-color: #f5f5f5;
+    font-size: 26/@rem;
+    color: #666666;
+}
+
+//顶部搜索条
+.header-bar{
+    padding: 0 30/@rem;
+    color: #222222;
+    .search-bar{
+        width: 580/@rem;
+        height: 60/@rem;
+        background-color: #ffffff;
+        align-items: center;
+        .h-icon-search{
+            display: inline-block;
+            font-size: 28/@rem;
+            margin: 0 20/@rem;
+            color: #cccccc;
+        }
+        input{
+            width: 510/@rem;
+            padding-right: 20/@rem;
+            border-radius: 0;
+        }
+    }
+    .add{
+        line-height: 60/@rem;
+        .h-icon-add{
+            display: inline-block;
+            font-size: 26/@rem;
+            color: #aaaaaa;
+        }
+    }
+    &.no-add{
+        .search-bar{
+            width: 690/@rem;
+            input{
+                width: 600/@rem;
+            }
+        }
+    }
+}
+
+/*按钮样式*/
+.btn-box{
+    padding: 60/@rem 30/@rem;
+    display: flex;
+    justify-content: space-between;
+    &.fixed{
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ffffff;
+        padding: 20/@rem 30/@rem;
+    }
+}
+.btn{
+    /*默认按钮样式：100%宽度，蓝底白字*/
+    display: inline-block;
+    width: 100%;
+    height: 88/@rem;
+    background-color: #4b77b0;
+    border: 1/@rem solid #4b77b0;
+    border-radius: 10/@rem;
+    text-align: center;
+    line-height: 88/@rem;
+    color: #ffffff;
+    font-size: 34/@rem;
+    &.small{
+        width: 328/@rem;
+    }
+    &.smaller{
+        width: 110/@rem;
+        height: 60/@rem;
+        font-size: 30/@rem;
+        line-height: 60/@rem;
+    }
+    &.light{
+        background-color: transparent;
+        color: #4b77b0;
+    }
+    &.fixed{
+        position: fixed;
+        left: 1/@rem;
+        right: 1/@rem;
+        bottom: 1/@rem;
+        border-radius: 0;
+    }
+}
+
+/*成功页面*/
+.result{
+    padding-top: 180/@rem;
+    padding-bottom: 230/@rem;
+    text-align: center;
+    .h-icon-success{
+        display: inline-block;
+        font-size: 130/@rem;
+        color: #45c189;
+    }
+    p{
+        font-size: 40/@rem;
+        color: #222222;
+        line-height: 58/@rem;
+        margin-top: 30/@rem;
+    }
+}
+.wf-info-box{
+    background-color: #ffffff;
+    border-bottom: 1/@rem solid #e5e5e5;
+    margin-top: -120/@rem;
+    padding: 30/@rem;
+    h3{
+        font-size: 30/@rem;
+        color: #222222;
+        font-weight: bold;
+        line-height: 44/@rem;
+    }
+    h5{
+        font-size: 26/@rem;
+        color: #666666;
+        line-height: 40/@rem;
+    }
+}
+
+
+@import 'index.less';
+@import 'customer.less';
+@import 'add.less';
+@import 'todo.less';
+@import 'workflow.less';
+@import 'fonticon.less';
+@import 'after-check.less';
+@import 'project.less';

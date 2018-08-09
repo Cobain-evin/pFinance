@@ -1,0 +1,114 @@
+.login-info{
+  background-color: #4b77b0;
+  padding: 44/@rem 30/@rem;
+  display: flex;
+  .portrait{
+    width: 102/@rem;
+    height: 102/@rem;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin-right: 28/@rem;
+    img{
+      width: 102/@rem;
+      height: 102/@rem;
+      border-radius: 50%;
+    }
+  }
+  .info{
+    padding-top: 6/@rem;
+    color: #ffffff;
+    h3{
+      font-size: 34/@rem;
+      line-height: 48/@rem;
+    }
+    h5{
+      font-size: 24/@rem;
+      line-height: 40/@rem;
+      opacity: .7;
+    }
+  }
+}
+.todo-block{
+  margin: 20/@rem 0;
+  background-color: #ffffff;
+  padding: 10/@rem 58/@rem 10/@rem 30/@rem;
+  display: flex;
+  justify-content: space-between;
+  .text{
+    padding-top: 20/@rem;
+    h3{
+      font-size: 40/@rem;
+      color: #222222;
+      line-height: 58/@rem;
+    }
+    h5{
+      font-size: 26/@rem;
+      color: #666666;
+      line-height: 48/@rem;
+      span{
+        font-size: 34/@rem;
+        color: #f63b30;
+        margin: 0 5/@rem;
+      }
+    }
+  }
+  .img{
+    img{
+      width: 202/@rem;
+      height: 152/@rem;
+    }
+  }
+}
+.index-list{
+  background-color: #ffffff;
+  padding: 0 30/@rem;
+  .list-content{
+    padding-top: 30/@rem;
+    border-bottom: 1/@rem solid #e5e5e5;
+    .title{
+      font-size: 34/@rem;
+      line-height: 50/@rem;
+      padding-bottom: 20/@rem;
+      color: #222222;
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        width: 33.3%;
+        margin-bottom: 30/@rem;
+        .icon{
+          width: 100/@rem;
+          height: 100/@rem;
+          border-radius: 8/@rem;
+          text-align: center;
+          line-height: 100/@rem;
+          margin: 0 auto 10/@rem;
+          color: #ffffff;
+          font-size: 50/@rem;
+          &.blue{
+            background: linear-gradient(right top, #3c7de6, #4f9aec)
+          }
+          &.red{
+            background: linear-gradient(right top, #f6332b, #fb705d)
+          }
+          &.yellow{
+            background: linear-gradient(right top, #fe973b, #f6cd24)
+          }
+          &.green{
+            background: linear-gradient(right top, #45c191, #5cd1ac)
+          }
+        }
+        p{
+          font-size: 26/@rem;
+          color: #222222;
+          line-height: 42/@rem;
+          text-align: center;
+        }
+        &.disabled{
+          opacity: .3;
+        }
+      }
+    }
+  }
+}

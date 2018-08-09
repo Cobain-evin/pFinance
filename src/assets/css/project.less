@@ -1,0 +1,22 @@
+.info-form.canFold{
+  li{
+    .info-rows{
+      .info-value{
+        display: flex;
+        justify-content: space-between;
+        .h-icon-arrow-right{
+          transform: rotate(-90deg);
+          transition: all ease-in-out .3s
+        }
+      }
+    }
+  }
+  &.folded{
+    li .info-rows .h-icon-arrow-right{
+      transform: rotate(90deg);
+    }
+    .sub-info-box{
+      display: none;
+    }
+  }
+}
